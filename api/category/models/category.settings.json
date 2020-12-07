@@ -1,12 +1,15 @@
 {
+  "kind": "collectionType",
   "connection": "default",
-  "collectionName": "categories",
+  "collectionName": "tags",
   "info": {
-    "name": "category"
+    "name": "tag",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "name": {
@@ -14,8 +17,8 @@
       "required": true
     },
     "articles": {
-      "via": "category",
-      "collection": "article"
+      "collection": "article",
+      "via": "tags"
     }
   }
 }

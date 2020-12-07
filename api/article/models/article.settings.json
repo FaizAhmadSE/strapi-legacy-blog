@@ -1,35 +1,44 @@
 {
+  "kind": "collectionType",
   "connection": "default",
   "collectionName": "articles",
   "info": {
-    "name": "article"
+    "name": "article",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "title": {
       "type": "string",
       "required": true
     },
-    "content": {
+    "description": {
       "type": "richtext",
       "required": true
     },
-    "image": {
+    "cover": {
       "model": "file",
       "via": "related",
       "plugin": "upload",
       "required": true
     },
-    "published_at": {
-      "type": "date",
-      "required": true
+    "tags": {
+      "via": "articles",
+      "collection": "category",
+      "dominant": true
     },
-    "category": {
-      "model": "category",
-      "via": "articles"
+    "seo_title": {
+      "type": "string"
+    },
+    "seo_description": {
+      "type": "string"
+    },
+    "seo_keywords": {
+      "type": "string"
     }
   }
 }
