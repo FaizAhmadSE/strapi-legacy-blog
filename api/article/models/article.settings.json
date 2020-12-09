@@ -26,11 +26,6 @@
       "plugin": "upload",
       "required": true
     },
-    "tags": {
-      "via": "articles",
-      "collection": "category",
-      "dominant": true
-    },
     "seo_title": {
       "type": "string"
     },
@@ -39,6 +34,15 @@
     },
     "seo_keywords": {
       "type": "string"
+    },
+    "category": {
+      "model": "category",
+      "via": "articles"
+    },
+    "tags": {
+      "collection": "tag",
+      "via": "articles",
+      "dominant": true
     }
   }
 }
