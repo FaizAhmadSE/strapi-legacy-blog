@@ -16,6 +16,15 @@
       "type": "string",
       "required": true
     },
+    "sub_title": {
+      "type": "string"
+    },
+    "notice": {
+      "type": "text"
+    },
+    "table_of_contents": {
+      "type": "richtext"
+    },
     "description": {
       "type": "richtext",
       "required": true
@@ -24,7 +33,7 @@
       "model": "file",
       "via": "related",
       "plugin": "upload",
-      "required": true
+      "required": false
     },
     "seo_title": {
       "type": "string"
