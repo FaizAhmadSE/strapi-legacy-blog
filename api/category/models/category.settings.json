@@ -3,13 +3,11 @@
   "connection": "default",
   "collectionName": "categories",
   "info": {
-    "name": "category",
-    "description": ""
+    "name": "category"
   },
   "options": {
     "increments": true,
-    "timestamps": true,
-    "draftAndPublish": false
+    "timestamps": true
   },
   "attributes": {
     "name": {
@@ -20,8 +18,9 @@
       "via": "category",
       "collection": "article"
     },
-    "parent": {
-      "model": "category"
+    "sub_categories": {
+      "via": "category",
+      "collection": "sub-category"
     }
   }
 }

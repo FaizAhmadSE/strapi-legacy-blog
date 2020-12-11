@@ -52,6 +52,10 @@
       "collection": "tag",
       "via": "articles",
       "dominant": true
+    },
+    "sub_category": {
+      "model": "sub-category",
+      "via": "articles"
     }
   }
 }

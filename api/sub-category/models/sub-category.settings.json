@@ -18,6 +18,10 @@
       "unique": true,
       "model": "category",
       "via": "sub_categories"
+    },
+    "articles": {
+      "via": "sub_category",
+      "collection": "article"
     }
   }
 }
